@@ -1,12 +1,17 @@
 import Initializer from './components/initializer';
-import GlobalStyles from '../common/style/global-style';
+import Layout from './components/layout/Layout';
+import GlobalStyles from './style/global-style';
+import AppProviders from './components/app-providers/AppProviders';
 
-function Application() {
+const Application = () => {
   return (
     <Initializer>
-      <GlobalStyles />
+      <AppProviders>
+        <GlobalStyles />
+        <Layout />
+      </AppProviders>
     </Initializer>
   );
-}
+};
 
 export default Application;
